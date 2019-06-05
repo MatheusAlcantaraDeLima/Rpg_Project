@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-color: rgb(197, 197, 197);
+    font-family: 'Cinzel', serif;
+    background:url('https://trello-attachments.s3.amazonaws.com/5ce31e9bd28e6337a8001bf2/5ce5b7bac8259437fbd48611/1d97dd0a66343d6fc5666aa53a8c468b/fundoRpgProject.jpg')
+}
+.titulo{
+    color: white;
+}
+.subTitulo{
+    text-align: center;
+    color: white;
+}
+#menu{
+    text-align: center;
+}
+#menu a{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border-radius: 3px;
+    padding: 2px;
+    margin-left: 2px;
+    transition: background-color 1s;
+}
+#menu a:hover{
+    font-weight: bolder;
+    background-color: crimson;
+
+}
