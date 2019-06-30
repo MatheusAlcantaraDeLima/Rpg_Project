@@ -1,19 +1,33 @@
+<!--Importando CDN do JQuery-->
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous">
+</script>
+
 <h1 class="titulo">Criação do personagem</h1>
 <h2  class="titulo">Escolha a classe que você vai pertencer</h2>
-<div>
-    <img class="img_personagens" src="/assets/img_humanos/guerreiroHumano.jpg" alt="Guerreiro humano" title="Guerreiro">
-    <img class="img_personagens" src="/assets/img_humanos/magoHumano.jpg" alt="Mago" title="Mago">
-    <img class="img_personagens" src="/assets/img_humanos/arqueiroHumano.jpg" alt="Arqueiro humano" title="Arqueiro">
-    <img class="img_personagens" src="/assets/img_humanos/assassinoHumano.jpg" alt="Assassino humano" title="Assassino">
+<div class="escolhaPerson">
+    <label id="guerreiro"><img class="img_personagens" src="/assets/img_humanos/guerreiroHumano.jpg" alt="Guerreiro humano" title="Guerreiro" 
+        onclick="selecionar()"></label>
+    <label id="mago"><img class="img_personagens" src="/assets/img_humanos/magoHumano.jpg" alt="Mago" title="Mago"></label>
+    <label id="arqueiro"><img class="img_personagens" src="/assets/img_humanos/arqueiroHumano.jpg" alt="Arqueiro humano" title="Arqueiro"></label>
+    <label id="assassino"><img class="img_personagens" src="/assets/img_humanos/assassinoHumano.jpg" alt="Assassino humano" title="Assassino"></label>
 </div>
+<script>
+    document.getElementById('guerreiro').addEventListener('onCLick', selecionar);
+    function selecionar(){
+        document.getElementById('guerreiro').style.border = "solid 2px green";
+     }
+</script>
 <br>
 <div class="texto">
     <h4>Agora você irá escolher mais aluns detalhes sobre o seu personagem</h4>
     <div>
         <ul>
             Nome: <input type="text" id="nomePerson" placeholder="Nome do Personagem"><br>
-            <span title="Conecede bônus de dano">Benção de guerra <input type="radio" name="bencao" id="bencao_guerra"></span><br> 
-            <span title="Conecede bônus de cura">Benção divina <input type="radio" name="bencao" id="bencao_cura"></span><br>
+            <label><span title="Conecede bônus de dano">Benção de guerra <input type="radio" name="bencao" id="bencao_guerra"></span></label><br> 
+            <label><span title="Conecede bônus de cura">Benção divina <input type="radio" name="bencao" id="bencao_cura"></span><br></label>
         </ul>
         
         <input type="submit" value="Criar">
